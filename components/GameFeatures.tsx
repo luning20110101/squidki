@@ -5,7 +5,7 @@ const GameFeatures = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Discover what makes Squidki a revolutionary musical survival experience
+          Discover What Makes Squidki Revolutionary
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -27,7 +27,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Character Transformations</h3>
             <p className="text-gray-300">
-            Step into the roles of iconic guards or contestants, each equipped with unique musical abilities and survival mechanics. Your choice will influence your gameplay style, allowing you to explore various strategies and tactics as you navigate through the intense challenges of Squidki.
+            Step into the roles of iconic guards or contestants within Squidki, each equipped with unique musical abilities and survival mechanics. Your choice will influence your gameplay style, allowing you to explore various strategies and tactics as you navigate through the intense challenges of Squidki.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Progressive Difficulty</h3>
             <p className="text-gray-300">
-            As you advance through the game, you'll face progressively challenging musical trials that test your rhythm and adaptability. Each round introduces new obstacles and complexities, ensuring that no two experiences are alike. This dynamic difficulty keeps players engaged and encourages continuous improvement.
+            As you advance through Squidki, you'll face progressively challenging musical trials that test your rhythm and adaptability. Each round introduces new obstacles and complexities, ensuring that no two experiences are alike. This dynamic difficulty keeps players engaged and encourages continuous improvement.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Intuitive Controls</h3>
             <p className="text-gray-300">
-            Enjoy easy-to-learn mechanics that seamlessly blend musical creation with survival gameplay. The intuitive controls make it accessible for players of all skill levels, allowing everyone to dive into the action without a steep learning curve. Whether you're a newcomer or a seasoned player, you'll find yourself quickly immersed in the thrilling world of Squidki.
+            Enjoy easy-to-learn mechanics that seamlessly blend musical creation with survival gameplay in Squidki. The intuitive controls make it accessible for players of all skill levels, allowing everyone to dive into the action without a steep learning curve. Whether you're a newcomer or a seasoned player, you'll find yourself quickly immersed in this thrilling world.
             </p>
           </div>
         </div>

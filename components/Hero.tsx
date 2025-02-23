@@ -57,8 +57,10 @@ export default function Hero({ currentGame, onGameSelect }: HeroProps) {
     <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-20 text-center">
       <div className="container mx-auto px-4">
         <h1 className="text-5xl font-bold mb-4">Where Squidki Meets Squid Game</h1>
-        <p className="text-xl mb-8">Welcome to the exhilarating world where Sprunki's musical creativity collides with the intense survival mechanics of Squid Game. </p>
-        <p className="text-xl mb-8">This unique gaming experience invites players to create beats not just for fun, but as a means of survival, engaging in deadly musical challenges that will keep you on the edge of your seat.</p>
+        <p className="text-xl mb-8">Experience the thrilling intersection of Squidki, where Sprunki's musical innovation collides with the intense survival dynamics of Squid Game. In this unique gaming environment, players are challenged to create music that not only entertains but also serves as a lifeline in high-stakes elimination challenges.</p>
+        <h1 className="text-5xl font-bold mb-4">A Unique Musical Survival Experience</h1>
+        <p className="text-xl mb-8">In Squidki, you will immerse yourself in a world where rhythm and survival intertwine. Each challenge draws inspiration from the iconic Squid Game series, transforming traditional survival mechanics into a rhythmic battle for life. Your ability to craft compelling beats will directly influence your chances of survival, making every note count.</p>
+        
         <div className="overflow-x-auto whitespace-nowrap pb-4">
           <div className="inline-flex space-x-4">
             {games.map((game, index) => (

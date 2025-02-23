@@ -40,12 +40,16 @@ export default function FAQ() {
       question: "How do I join the Squidki community?",
       answer: "Enter our realm through social media channels, music forums, and by sharing your Squidki creations with fellow music enthusiasts online.",
     },
+    {
+      question: "Conclusion",
+      answer: "Where Sprunki meets Squid Game offers an exhilarating blend of music and survival that redefines traditional gaming experiences. With its unique challenges, strategic gameplay, and engaging community, this game invites you to step into a world where every beat can mean the difference between life and death. Join us in this revolutionary musical survival adventure today!",
+    },
   ]
 
   return (
     <section className="py-16 bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions About Squidki</h2>
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-gray-700 p-6 rounded-lg">
