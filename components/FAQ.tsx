@@ -3,7 +3,7 @@ export default function FAQ() {
     {
       question: "What is Squidki?",
       answer:
-        "Squidki represents the ultimate convergence of Sprunki and Squid Game, where players engage in music creation to navigate and survive elimination challenges. This game seamlessly blends Sprunki's musical creativity with the intense survival mechanics reminiscent of Squid Game.",
+        "Squidki represents the ultimate convergence of Squidki and Squid Game, where players engage in music creation to navigate and survive elimination challenges. This game seamlessly blends Sprunki's musical creativity with the intense survival mechanics reminiscent of Squid Game.",
     },
     {
       question: "How do I play Squidki?",
@@ -42,7 +42,7 @@ export default function FAQ() {
     },
     {
       question: "Conclusion",
-      answer: "Where Sprunki meets Squid Game offers an exhilarating blend of music and survival that redefines traditional gaming experiences. With its unique challenges, strategic gameplay, and engaging community, this game invites you to step into a world where every beat can mean the difference between life and death. Join us in this revolutionary musical survival adventure today!",
+      answer: "Where squidki meets Squid Game offers an exhilarating blend of music and survival that redefines traditional gaming experiences. With its unique challenges, strategic gameplay, and engaging community, this game invites you to step into a world where every beat can mean the difference between life and death. Join us in this revolutionary musical survival adventure today!",
     },
   ]
 

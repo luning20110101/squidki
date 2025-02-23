@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const games = [
   {
-    name: "Sprunki Squid game",
+    name: "Squidki Squid game",
     icon: "https://squidki.com/images/sprunki-but-squid-game.webp",
     url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
     info: {
@@ -91,7 +91,7 @@ const games = [
     url: "https://www.crazygames.com/embed/bloxdhop-io",
   },
   {
-    name: "Sprunki  ",
+    name: "Squidki  ",
     icon: "https://imgs.crazygames.com/games/sprunki-itn/cover_16x9-1732009692724.png?metadata=none&quality=70&width=541",
     url: "https://www.crazygames.com/embed/sprunki-itn",
   },
