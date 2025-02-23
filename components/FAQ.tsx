@@ -7,26 +7,26 @@ export default function FAQ() {
     },
     {
       question: "How do I play Squidki?",
-      answer: "To play Squidki, select your character—either a guard or a contestant—then craft strategic beats to navigate through elimination rounds inspired by classic Squid Game challenges. Your musical selections will have a direct impact on your chances of survival, making every decision critical.",
+      answer: "To play Squidki, select your character—either a guard or a contestant—then craft strategic beats to navigate through elimination rounds inspired by classic Squid Game challenges. Your musical selections will have a direct impact on your chances of survival, making every decision critical in Squidki.",
     },
     {
       question: "Can I save my Squidki performances?",
       answer:
-        "Absolutely! You can record and save your musical survival runs, allowing you to share your experiences with others or analyze your strategies. Join our community to showcase your best performances and celebrate your achievements.",
+        "Absolutely! You can record and save your musical survival runs within Squidki, allowing you to share your experiences with others or analyze your strategies. Join our community to showcase your best performances and celebrate your achievements in Squidki.",
     },
     {
       question: "What platforms support Squidki?",
-      answer: "Squidki is accessible on both desktop and mobile browsers, enabling you to create musical masterpieces anytime and anywhere. Enjoy the flexibility of playing on your preferred device.",
+      answer: "Squidki is accessible on both desktop and mobile browsers, enabling you to create musical masterpieces anytime and anywhere. Enjoy the flexibility of playing on your preferred device while exploring all that Squidki has to offer.",
     },
     {
       question: "What special features exist in Squidki?",
       answer:
-        "Explore various character combinations within Squidki to trigger exhilarating musical challenges and unlock spine-chilling bonus features. Each unique combination can lead to distinct survival sound patterns and captivating visual effects that enhance your gameplay experience.",
+        "Explore various character combinations within Squidki to trigger exhilarating musical challenges and unlock spine-chilling bonus features. Each unique combination can lead to distinct survival sound patterns and captivating visual effects that enhance your gameplay experience in Squidki.",
     },
     {
       question: "Is Squidki suitable for everyone?",
       answer:
-        "While Squidki incorporates intense survival elements, the musical creation aspect is designed to be accessible for all players. Participants should feel comfortable with rhythm and be prepared for occasional thrilling challenges that add excitement to the game.",
+        "While Squidki incorporates intense survival elements, the musical creation aspect is designed to be accessible for all players. Participants should feel comfortable with rhythm and be prepared for occasional thrilling challenges that add excitement to the game of Squidki.",
     },
     {
       question: "Does Squidki receive updates?",

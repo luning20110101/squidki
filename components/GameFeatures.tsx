@@ -16,7 +16,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Musical Survival</h3>
             <p className="text-gray-300">
-            Engage in thrilling musical challenges where your rhythm skills play a crucial role in determining your fate. Compete against others in high-stakes scenarios where every beat could mean the difference between survival and elimination. The fusion of music and survival creates an electrifying atmosphere that keeps players on their toes.
+            Engage in thrilling musical challenges within Squidki, where your rhythm skills play a crucial role in determining your fate. Compete against others in high-stakes scenarios where every beat could mean the difference between survival and elimination. The fusion of music and survival in Squidki creates an electrifying atmosphere that keeps players on their toes.
             </p>
           </div>
 
@@ -49,7 +49,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Competitive Community</h3>
             <p className="text-gray-300">
-            Join a vibrant community of players from around the globe, sharing your musical survival experiences and competing in intense rhythm battles. Engage with fellow players, exchange strategies, and showcase your skills in a supportive environment that fosters creativity and competition.
+            Join a vibrant community of players from around the globe, sharing your musical survival experiences and competing in intense rhythm battles within Squidki. Engage with fellow players, exchange strategies, and showcase your skills in a supportive environment that fosters creativity and competition.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Progressive Difficulty</h3>
             <p className="text-gray-300">
-            As you advance through Squidki, you'll face progressively challenging musical trials that test your rhythm and adaptability. Each round introduces new obstacles and complexities, ensuring that no two experiences are alike. This dynamic difficulty keeps players engaged and encourages continuous improvement.
+            As you advance through Squidki, you'll face progressively challenging musical trials that test your rhythm and adaptability. Each round introduces new obstacles and complexities, ensuring that no two experiences are alike in Squidki. This dynamic difficulty keeps players engaged and encourages continuous improvement.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ const GameFeatures = () => {
             </div>
             <h3 className="text-xl font-bold mb-4">Intuitive Controls</h3>
             <p className="text-gray-300">
-            Enjoy easy-to-learn mechanics that seamlessly blend musical creation with survival gameplay in Squidki. The intuitive controls make it accessible for players of all skill levels, allowing everyone to dive into the action without a steep learning curve. Whether you're a newcomer or a seasoned player, you'll find yourself quickly immersed in this thrilling world.
+            Enjoy easy-to-learn mechanics that seamlessly blend musical creation with survival gameplay in Squidki. The intuitive controls make it accessible for players of all skill levels, allowing everyone to dive into the action without a steep learning curve. Whether you're a newcomer or a seasoned player, you'll find yourself quickly immersed in this thrilling world of Squidki.
             </p>
           </div>
         </div>
