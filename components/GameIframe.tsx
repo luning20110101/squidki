@@ -185,7 +185,6 @@ export default function GameIframe({ currentGame, onGameSelect }: GameIframeProp
             )}
           </div>
           <div className="lg:w-1/4">
-            <h3 className="text-xl font-semibold mb-4">Game List</h3>
             <div className="grid grid-cols-2 gap-4">
               {games.map((game, index) => (
                 <div
