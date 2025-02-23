@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const games = [
   {
-    name: "Sprunki Squid game",
+    name: "Squidki Squid game",
     icon: "https://squidki.com/images/sprunki-but-squid-game.webp",
   },
   {
@@ -56,7 +56,7 @@ export default function Hero({ currentGame, onGameSelect }: HeroProps) {
   return (
     <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-20 text-center">
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-bold mb-4">Where Sprunki Meets Squid Game</h1>
+        <h1 className="text-5xl font-bold mb-4">Where Squidki Meets Squid Game</h1>
         <p className="text-xl mb-8">Welcome to the exhilarating world where Sprunki's musical creativity collides with the intense survival mechanics of Squid Game. </p>
         <p className="text-xl mb-8">This unique gaming experience invites players to create beats not just for fun, but as a means of survival, engaging in deadly musical challenges that will keep you on the edge of your seat.</p>
         <div className="overflow-x-auto whitespace-nowrap pb-4">
