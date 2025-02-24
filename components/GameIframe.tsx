@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const games = [
   {
-    name: "Squidki Squid game",
+    name: "Squidki",
     icon: "https://imgs.crazygames.com/games/sprunki-itn/cover_16x9-1732009692724.png?metadata=none&quality=70&width=645.5",
     url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
     info: {
@@ -12,12 +12,12 @@ const games = [
       rating: "8.9 (338,606 votes)",
       votes: "476",
       released: "October 2024",
-      lastUpdated: "February 17, 2025",
+      lastUpdated: "Nov 20, 2024",
       technology: "HTML5",
       platform: "Browser (desktop, mobile, tablet)",
       tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
       description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it’s a fun and engaging way to express your creativity.",
-      controls: "Use the left mouse button to play.",
+      controls: "Use a mouse to play the game.",
     },
   },
   {
