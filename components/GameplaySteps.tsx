@@ -52,7 +52,7 @@ const GameplaySteps = () => {
           </div>
         </div>
 
-        {/* Survival Tips */}
+        {/* Survival Tips 
         <div className="mt-16 bg-gray-800 rounded-lg p-8">
           <h3 className="text-2xl font-bold text-center mb-8">Squidki Survival Tips</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -78,6 +78,7 @@ const GameplaySteps = () => {
             </div>
           </div>
         </div>
+        */}
       </div>
     </section>
   )

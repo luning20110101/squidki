@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Hero from "@/components/Hero"
 import GameIframe from "@/components/GameIframe"
 import GameplayGuide from "@/components/GameplayGuide"
@@ -6,12 +9,24 @@ import GameFeatures from "@/components/GameFeatures"
 import FAQ from "@/components/FAQ"
 
 export default function Home() {
+  const [currentGame, setCurrentGame] = useState<string>("Squidki Game")
+
+  const handleGameSelect = (gameName: string) => {
+    setCurrentGame(gameName)
+  }
+
   return (
     <main>
-      <GameIframe />
+      <GameIframe 
+        currentGame={currentGame}
+        onGameSelect={handleGameSelect}
+      />
       <GameplayGuide />
-      <Hero />
       <GameplaySteps />
+      <Hero 
+        currentGame={currentGame}
+        onGameSelect={handleGameSelect}
+      />
       <GameFeatures />
       <FAQ />
     </main>
