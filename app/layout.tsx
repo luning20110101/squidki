@@ -2,8 +2,6 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -23,9 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-gray-900 text-white`}>
         <GoogleAnalytics />
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   )

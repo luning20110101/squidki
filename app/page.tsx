@@ -7,6 +7,8 @@ import GameplayGuide from "@/components/GameplayGuide"
 import GameplaySteps from "@/components/GameplaySteps"
 import GameFeatures from "@/components/GameFeatures"
 import FAQ from "@/components/FAQ"
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   const [currentGame, setCurrentGame] = useState<string>("Squidki Game")
@@ -17,6 +19,7 @@ export default function Home() {
 
   return (
     <main>
+      <Navbar onGameSelect={handleGameSelect} />
       <GameIframe 
         currentGame={currentGame}
         onGameSelect={handleGameSelect}
@@ -29,6 +32,7 @@ export default function Home() {
       />
       <GameFeatures />
       <FAQ />
+      <Footer />
     </main>
   )
 }

@@ -126,7 +126,7 @@ export default function GameIframe({ currentGame, onGameSelect }: GameIframeProp
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Play {selectedGame.name}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-wider mb-8 text-center">Play {selectedGame.name}</h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-3/4">
             <div className="aspect-w-16 aspect-h-9 mb-8">

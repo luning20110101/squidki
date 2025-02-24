@@ -6,6 +6,7 @@ const games = [
   {
     name: "Squidki Game",
     icon: "/images/Squidki Game.jpg",
+    url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
   },
   {
     name: "Squidki Pyramixed Game",
