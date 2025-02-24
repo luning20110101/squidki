@@ -4,39 +4,34 @@ import Image from "next/image"
 
 const games = [
   {
-    name: "Squidki Squid game",
-    icon: "https://squidki.com/images/sprunki-but-squid-game.webp",
+    name: "Squidki Game",
+    icon: "/images/Squidki Game.jpg",
   },
   {
-    name: "Pirate Island",
-    icon: "https://imgs.crazygames.com/pirate-island_16x9/20250214090720/pirate-island_16x9-cover?metadata=none&quality=70&width=541",
+    name: "Squidki Pyramixed Game",
+    icon: "/images/Squidki Pyramixed Game.jpg",
+    url: "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
   },
   {
-    name: "Ludoteca",
-    icon: "https://imgs.crazygames.com/ludoteca_16x9/20250217065437/ludoteca_16x9-cover?metadata=none&quality=70&width=541",
+    name: "Super Friday Night Squid Challenge",
+    icon: "/images/Super Friday Night Squid Challenge.jpg",
+    url: "https://sprunki-games.com/super-friday-night-squid-challenge.embed",
   },
   {
-    name: "Snake Shooter",
-    icon: "https://imgs.crazygames.com/snake-shooter-cbu_16x9/20250214062951/snake-shooter-cbu_16x9-cover?metadata=none&quality=70&width=541",
+    name: "Squidki Retake",
+    icon: "/images/Squidki Retake.jpg",
+    url: "https://wowtbc.net/sprunkin/retake/index.html",
   },
   {
-    name: "Craft Drill",
-    icon: "https://imgs.crazygames.com/idle-craft-drill_16x9/20250212082307/idle-craft-drill_16x9-cover?metadata=none&quality=70&width=541",
+    name: "Squidki Shocked",
+    icon: "/images/Squidki Shocked.jpg",
+    url: "https://iframegame.com/embed/sprunki-shocked/index.html",
   },
   {
-    name: "Madness Cars Destroy",
-    icon: "https://imgs.crazygames.com/madness-car-destroy_16x9/20250218081013/madness-car-destroy_16x9-cover?metadata=none&quality=70&width=541",
+    name: "Squidki Sinner",
+    icon: "/images/Squidki Sinner.jpg",
+    url: "https://game.sprunkiincredibox.app/Sprunki%20Incredibox.html",
   },
-  {
-    name: "Air Block",
-    icon: "https://imgs.crazygames.com/air-block_16x9/20250213083204/air-block_16x9-cover?metadata=none&quality=70&width=541",
-  },
-  {
-    name: "Nuclear Day",
-    icon: "https://imgs.crazygames.com/nuclear-day_16x9/20250214130538/nuclear-day_16x9-cover?metadata=none&quality=70&width=541",
-  },
-  { name: "Rects.io", icon: "https://imgs.crazygames.com/rectsio.png?metadata=none&quality=70&width=541" },
-  { name: "Mekorama", icon: "https://imgs.crazygames.com/mekorama.png?metadata=none&quality=70&width=541" },
 ]
 
 interface HeroProps {

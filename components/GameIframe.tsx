@@ -4,8 +4,8 @@ import Image from "next/image"
 
 const games = [
   {
-    name: "Squidki",
-    icon: "https://imgs.crazygames.com/games/sprunki-itn/cover_16x9-1732009692724.png?metadata=none&quality=70&width=645.5",
+    name: "Squidki Game",
+    icon: "/images/Squidki Game.jpg",
     url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
     info: {
       developer: "Squidki Game",
@@ -16,94 +16,34 @@ const games = [
       technology: "HTML5",
       platform: "Browser (desktop, mobile, tablet)",
       tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
-      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it’s a fun and engaging way to express your creativity.",
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
       controls: "Use a mouse to play the game.",
     },
   },
   {
-    name: "Pirate Island",
-    icon: "https://imgs.crazygames.com/pirate-island_16x9/20250214090720/pirate-island_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/pirate-island",
+    name: "Squidki Pyramixed Game",
+    icon: "/images/Squidki Pyramixed Game.jpg",
+    url: "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
   },
   {
-    name: "Ludoteca",
-    icon: "https://imgs.crazygames.com/ludoteca_16x9/20250217065437/ludoteca_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/ludoteca",
+    name: "Super Friday Night Squid Challenge",
+    icon: "/images/Super Friday Night Squid Challenge.jpg",
+    url: "https://sprunki-games.com/super-friday-night-squid-challenge.embed",
   },
   {
-    name: "Snake Shooter",
-    icon: "https://imgs.crazygames.com/snake-shooter-cbu_16x9/20250214062951/snake-shooter-cbu_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/snake-shooter-cbu",
+    name: "Squidki Retake",
+    icon: "/images/Squidki Retake.jpg",
+    url: "https://wowtbc.net/sprunkin/retake/index.html",
   },
   {
-    name: "Craft Drill",
-    icon: "https://imgs.crazygames.com/idle-craft-drill_16x9/20250212082307/idle-craft-drill_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/idle-craft-drill",
+    name: "Squidki Shocked",
+    icon: "/images/Squidki Shocked.jpg",
+    url: "https://iframegame.com/embed/sprunki-shocked/index.html",
   },
   {
-    name: "Madness Cars Destroy",
-    icon: "https://imgs.crazygames.com/madness-car-destroy_16x9/20250218081013/madness-car-destroy_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/dk/embed/madness-car-destroy",
-  },
-  {
-    name: "Air Block",
-    icon: "https://imgs.crazygames.com/air-block_16x9/20250213083204/air-block_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/air-block",
-  },
-  {
-    name: "Nuclear Day",
-    icon: "https://imgs.crazygames.com/nuclear-day_16x9/20250214130538/nuclear-day_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/nuclear-day",
-  },
-  {
-    name: "Rects.io",
-    icon: "https://imgs.crazygames.com/rectsio.png?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/dk/embed/rectsio",
-  },
-  {
-    name: "Mekorama",
-    icon: "https://imgs.crazygames.com/mekorama.png?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/dk/embed/mekorama",
-  },
-  {
-    name: "Snake Shooter",
-    icon: "https://imgs.crazygames.com/snake-shooter-cbu_16x9/20250214062951/snake-shooter-cbu_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/snake-shooter-cbu",
-  },
-  {
-    name: "Mystery Digger",
-    icon: "https://imgs.crazygames.com/ragdoll-archers_16x9/20240205020743/ragdoll-archers_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/ragdoll-archers",
-  },
-  {
-    name: "Ragdoll Archers",
-    icon: "https://imgs.crazygames.com/snake-shooter-cbu_16x9/20250214062951/snake-shooter-cbu_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/snake-shooter-cbu",
-  },
-  {
-    name: "Space Waves",
-    icon: "https://imgs.crazygames.com/space-waves_16x9/20241203031650/space-waves_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/space-waves",
-  },
-  {
-    name: "Bloxd.io",
-    icon: "https://imgs.crazygames.com/games/bloxdhop-io/cover_16x9-1709115453824.png?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/bloxdhop-io",
-  },
-  {
-    name: "Squidki  ",
-    icon: "https://imgs.crazygames.com/games/sprunki-itn/cover_16x9-1732009692724.png?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/sprunki-itn",
-  },
-  {
-    name: "Color Match  ",
-    icon: "https://imgs.crazygames.com/color-match-amg_16x9/20241223043902/color-match-amg_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/color-match-amg",
-  },
-  {
-    name: "Bridge Race",
-    icon: "https://imgs.crazygames.com/bridge-race_16x9/20241227062023/bridge-race_16x9-cover?metadata=none&quality=70&width=541",
-    url: "https://www.crazygames.com/embed/bridge-race",
+    name: "Squidki Sinner",
+    icon: "/images/Squidki Sinner.jpg",
+    url: "https://game.sprunkiincredibox.app/Sprunki%20Incredibox.html",
   },
 ]
 
@@ -185,7 +125,7 @@ export default function GameIframe({ currentGame, onGameSelect }: GameIframeProp
             )}
           </div>
           <div className="lg:w-1/4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {games.map((game, index) => (
                 <div
                   key={index}
@@ -195,13 +135,14 @@ export default function GameIframe({ currentGame, onGameSelect }: GameIframeProp
                   onClick={() => handleGameClick(game.name)}
                 >
                   <Image
-                    src={game.icon || "/placeholder.svg"}
+                    src={game.icon}
                     alt={game.name}
-                    width={100}
-                    height={56}
-                    className="rounded-lg object-cover"
+                    width={200}
+                    height={112}
+                    className="rounded-lg object-cover w-full"
+                    priority={index < 4}
                   />
-                  <span className="mt-2 text-sm text-center">{game.name}</span>
+                  <span className="mt-2 text-base text-center">{game.name}</span>
                 </div>
               ))}
             </div>
