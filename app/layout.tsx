@@ -4,23 +4,9 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import ReactGA from 'react-ga4';
+import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 const inter = Inter({ subsets: ["latin"] })
-
-// 获取环境变量中的 Google Analytics ID
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-
-// 初始化 Google Analytics
-/*if (GA_TRACKING_ID) {
-  ReactGA.initialize(GA_TRACKING_ID);
-}*/
-
-if (process.env.NODE_ENV === 'production' && GA_TRACKING_ID) {
-  ReactGA.initialize(GA_TRACKING_ID);
-}
 
 export const metadata: Metadata = {
   title: "Squidki - The Ultimate Squidki Experience",
@@ -33,17 +19,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-  const pathname = usePathname();
-
-  useEffect(() => {
-    // 每次路由变化时发送页面视图事件
-    ReactGA.send({ hitType: 'pageview', page: pathname });
-  }, [pathname]);
-
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-900 text-white`}>
+        <GoogleAnalytics />
         <Navbar />
         {children}
         <Footer />
@@ -51,7 +30,5 @@ export default function RootLayout({
     </html>
   )
 }
-
-
 
 import './globals.css'
