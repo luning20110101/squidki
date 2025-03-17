@@ -1,11 +1,13 @@
 "use client"
 
+import { useState, useRef } from "react"
 import Image from "next/image"
 
+import GameList from "./GameList"
 const games = [
   {
     name: "Squidki Game",
-    icon: "/images/Squidki Game.jpg",
+    icon: "/images/new_mods/Squidki Game.jpg",
     url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
     info: {
       developer: "Squidki Game",
@@ -22,7 +24,7 @@ const games = [
   },
   {
     name: "Squidki Pyramixed Game",
-    icon: "/images/Squidki Pyramixed Game.jpg",
+    icon: "/images/new_mods/Squidki Pyramixed Game.jpg",
     url: "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
     info: {
       developer: "Squidki Game",
@@ -39,7 +41,7 @@ const games = [
   },
   {
     name: "Super Friday Night Squid Challenge",
-    icon: "/images/Super Friday Night Squid Challenge.jpg",
+    icon: "/images/new_mods/Super Friday Night Squid Challenge.jpg",
     url: "https://sprunki-games.com/super-friday-night-squid-challenge.embed",
     info: {
       developer: "Squidki Game",
@@ -56,7 +58,7 @@ const games = [
   },
   {
     name: "Squidki Retake",
-    icon: "/images/Squidki Retake.jpg",
+    icon: "/images/new_mods/Squidki Retake.jpg",
     url: "https://wowtbc.net/sprunkin/retake/index.html",
     info: {
       developer: "Squidki Game",
@@ -72,9 +74,27 @@ const games = [
     },
   },
   {
-    name: "Squidki Shocked",
-    icon: "/images/Squidki Shocked.jpg",
-    url: "https://iframegame.com/embed/sprunki-shocked/index.html",
+    name: "Squidki Sinner",
+    icon: "/images/new_mods/Squidki Sinner.jpg",
+    url: "https://game.sprunkiincredibox.app/Sprunki%20Incredibox.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+    
+  },
+  {
+    "name": "Sprunki Spruted Remastered",
+    "icon": "/images/new_mods/Sprunki Spruted Remastered.jpeg",
+    "url": "https://wowtbc.net/sprunkin/spruted-remastered/index.html",
     info: {
       developer: "Squidki Game",
       rating: "8.9 (338,606 votes)",
@@ -89,9 +109,230 @@ const games = [
     },
   },
   {
-    name: "Squidki Sinner",
-    icon: "/images/Squidki Sinner.jpg",
-    url: "https://game.sprunkiincredibox.app/Sprunki%20Incredibox.html",
+    "name": "Skibidi Toilet Remake 4.5",
+    "icon": "/images/new_mods/Sprunki Skibidi Toilet Remake 4.5.png",
+    "url": "https://wowtbc.net/sprunkin/skibidi-toilet4.5/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki Revamped 2.0",
+    "icon": "/images/new_mods/Sprunki Revamped 2.0.png",
+    "url": "https://wowtbc.net/sprunkin/revamped-2/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Corruptbox but Abgerny",
+    "icon": "/images/new_mods/Corruptbox but Abgerny.png",
+    "url": "https://wowtbc.net/sprunkin/corruptbox-abgerney/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki EmojiCat",
+    "icon": "/images/new_mods/Sprunki EmojiCat.png",
+    "url": "https://wowtbc.net/sprunkin/emojicat/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Pyramixed but Agents",
+    "icon": "/images/new_mods/Sprunki Pyramixed but Agents.png",
+    "url": "https://wowtbc.net/sprunkin/pyramixed-agent/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki deluxe!!",
+    "icon": "/images/new_mods/Sprunki deluxe!!.png",
+    "url": "https://wowtbc.net/sprunkin/sprunked-deluxe/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki Fiddlebops 56",
+    "icon": "/images/new_mods/Sprunki Fiddlebops 56.png",
+    "url": "https://wowtbc.net/sprunkin/fiddlebops56/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki Definitive Phase 9 Fan-made",
+    "icon": "/images/new_mods/Sprunki Definitive Phase 9 Fan-made.png",
+    "url": "https://wowtbc.net/sprunkin/definitive-phase9-fanmade/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki ParaRoblox",
+    "icon": "/images/new_mods/Sprunki ParaRoblox.png",
+    "url": "https://wowtbc.net/sprunkin/pararoblox/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunked Plus+",
+    "icon": "/images/new_mods/Sprunked Plus+.png",
+    "url": "https://wowtbc.net/sprunkin/sprunked-plus/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunksters But Sprinkle",
+    "icon": "/images/new_mods/Sprunksters But Sprinkle.png",
+    "url": "https://wowtbc.net/sprunkin/sprunksters-but-Sprinkle/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki Chaotic Good Night Time",
+    "icon": "/images/new_mods/Sprunki Chaotic Good Night Time.png",
+    "url": "https://wowtbc.net/sprunkin/chaotic-good-night/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunksters But Sprinkle",
+    "icon": "/images/new_mods/Sprunksters But Sprinkle.png",
+    "url": "https://wowtbc.net/sprunkin/sprunksters-sprinkle/index.html",
+    info: {
+      developer: "Squidki Game",
+      rating: "8.9 (338,606 votes)",
+      votes: "476",
+      released: "October 2024",
+      lastUpdated: "Nov 20, 2024",
+      technology: "HTML5",
+      platform: "Browser (desktop, mobile, tablet)",
+      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
+      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
+      controls: "Use a mouse to play the game.",
+    },
+  },
+  {
+    "name": "Sprunki Final",
+    "icon": "/images/new_mods/Sprunki Final.png",
+    "url": "https://wowtbc.net/sprunkin/sprunki-final/index.html",
     info: {
       developer: "Squidki Game",
       rating: "8.9 (338,606 votes)",
@@ -110,113 +351,149 @@ const games = [
 interface GameIframeProps {
   currentGame: string
   onGameSelect: (game: string) => void
+  isDarkMode: boolean
 }
 
-export default function GameIframe({ currentGame, onGameSelect }: GameIframeProps) {
+export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: GameIframeProps) {
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
   const selectedGame = games.find((game) => game.name === currentGame) || games[0]
 
-  const handleGameClick = (gameName: string) => {
-    if (typeof onGameSelect === "function") {
-      onGameSelect(gameName)
+  const handleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      if (iframeRef.current?.requestFullscreen) {
+        iframeRef.current.requestFullscreen()
+        setIsFullscreen(true)
+      }
     } else {
-      console.info("onGameSelect is not a function")
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+        setIsFullscreen(false)
+      }
     }
   }
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-wider mb-8 text-center">Play {selectedGame.name}</h2>
+        <h2 className={`text-3xl md:text-4xl font-bold tracking-wider mb-8 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
+          Play {selectedGame.name}
+        </h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="lg:w-3/4">
-            <div className="aspect-w-16 aspect-h-9 mb-8">
+          <GameList 
+            onSelect={onGameSelect} 
+            currentGame={currentGame}
+            isDarkMode={isDarkMode}
+          />
+          <div className="lg:w-3/4 relative">
+            {/* 全屏按钮 */}
+            <button
+              onClick={handleFullscreen}
+              className="absolute top-4 right-4 z-10 bg-gray-800 bg-opacity-75 p-2 rounded-lg hover:bg-gray-700 transition-colors"
+              aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+            >
+              {isFullscreen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9L4 4m0 0l5 5m-5-5v5m16-5l-5 5m5-5v5m0 11l-5-5m5 5h-5m-11 0l5-5m-5 5v-5" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0 0l-5-5m-7 11h4m0 0v4m0-4l-5 5m11-5h-4m4 0v4m0-4l-5 5" />
+                </svg>
+              )}
+            </button>
+            
+            {/* iframe */}
+            <div ref={containerRef} className="relative pt-[56.25%] bg-black rounded-lg overflow-hidden">
               <iframe
+                ref={iframeRef}
                 src={selectedGame.url}
-                className="w-full h-full"
-                style={{ aspectRatio: "16 / 9" }}
+                className="absolute top-0 left-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              />
             </div>
             {selectedGame.info && (
               <>
                 <div className="bg-gray-800 p-6 rounded-lg mb-8">
-                  <h3 className="text-2xl font-bold mb-4">Game Information</h3>
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
+                  <h3 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Game Information</h3>
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
                       <p><strong>Developer:</strong> {selectedGame.info.developer}</p>
                       <p><strong>Rating:</strong> {selectedGame.info.rating} ({selectedGame.info.votes} votes)</p>
                       <p><strong>Released:</strong> {selectedGame.info.released}</p>
                       <p><strong>Last Updated:</strong> {selectedGame.info.lastUpdated}</p>
-                    </div>
-                    <div>
+                  </div>
+                  <div>
                       <p><strong>Technology:</strong> {selectedGame.info.technology}</p>
                       <p><strong>Platform:</strong> {selectedGame.info.platform}</p>
                       <p><strong>Controls:</strong> {selectedGame.info.controls}</p>
                     </div>
+                </div>
+                <div className="mb-4">
+                  <strong>Tags:</strong>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {selectedGame.info.tags.map((tag, index) => (
+                      <span key={index} className="bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <div className="mb-4">
-                    <strong>Tags:</strong>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {selectedGame.info.tags.map((tag, index) => (
-                        <span key={index} className="bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <strong>Description:</strong>
-                    <p className="mt-2">{selectedGame.info.description}</p>
+                </div>
+                <div>
+                  <strong>Description:</strong>
+                    <p className={`mt-2 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>{selectedGame.info.description}</p>
                   </div>
                 </div>
 
                 <div className="bg-gray-800 p-6 rounded-lg">
-                  <h3 className="text-2xl font-bold mb-6">Squidki Survival Tips</h3>
+                  <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Squidki Survival Tips</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex items-start gap-4">
                       <div className="text-purple-500">✓</div>
-                      <p>Become adept at navigating the signature challenges of Squid Game, now infused with exciting musical elements. Understanding the unique mechanics of each challenge is crucial for survival, allowing you to leverage your musical skills to stay ahead of the competition.</p>
+                      <p className={`text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Become adept at navigating the signature challenges of Squid Game, now infused with exciting musical elements. Understanding the unique mechanics of each challenge is crucial for survival, allowing you to leverage your musical skills to stay ahead of the competition.</p>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="text-purple-500">✓</div>
-                      <p>Integrate Sprunki's innovative musical mechanics into your survival strategy. Crafting beats that resonate with the game's rhythm will enhance your ability to maneuver through obstacles and outsmart opponents, making every decision count in your quest for survival.</p>
+                      <p className={`text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Integrate Sprunki's innovative musical mechanics into your survival strategy. Crafting beats that resonate with the game's rhythm will enhance your ability to maneuver through obstacles and outsmart opponents, making every decision count in your quest for survival.</p>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="text-purple-500">✓</div>
-                      <p>Stay alert to the Front Man's musical cues, as they provide vital information about upcoming challenges and threats. Recognizing these signals can give you a strategic advantage, helping you prepare for what lies ahead and ensuring you’re always one step ahead of your rivals.</p>
+                      <p className={`text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Stay alert to the Front Man's musical cues, as they provide vital information about upcoming challenges and threats. Recognizing these signals can give you a strategic advantage, helping you prepare for what lies ahead and ensuring you're always one step ahead of your rivals.</p>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="text-purple-500">✓</div>
-                      <p>Utilize your musical creativity to compose strategic beats tailored for each elimination round. Your compositions should not only entertain but also serve as tactical tools that can influence the dynamics of the game, enhancing your chances of survival against formidable opponents.</p>
+                      <p className={`text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Utilize your musical creativity to compose strategic beats tailored for each elimination round. Your compositions should not only entertain but also serve as tactical tools that can influence the dynamics of the game, enhancing your chances of survival against formidable opponents.</p>
                     </div>
-                    <div className="flex items-start gap-4">
-                      <div className="text-purple-500">✓</div>
-                      <p>Engage with a vibrant community of players in thrilling musical survival battles. Collaborate, compete, and share strategies with others as you navigate through the intense challenges that Squidki offers. The camaraderie and competition will elevate your gaming experience, making each victory even more rewarding.</p>
-                    </div>
-                  </div>
+                    
                 </div>
+              </div>
               </>
             )}
           </div>
           <div className="lg:w-1/4">
-            <div className="grid grid-cols-1 gap-4">
+            <h3 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Squidki Games</h3>
+            <div className="grid grid-cols-2 gap-4">
               {games.map((game, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col items-center cursor-pointer hover:scale-105 transition-transform ${
-                    currentGame === game.name ? "ring-4 ring-yellow-400 rounded-lg" : ""
-                  }`}
-                  onClick={() => handleGameClick(game.name)}
+                  className={`flex flex-col items-center cursor-pointer hover:scale-105 transition-transform`}
+                  onClick={() => onGameSelect(game.name)}
                 >
                   <Image
                     src={game.icon}
                     alt={game.name}
-                    width={200}
-                    height={112}
+                    width={100}
+                    height={56}
                     className="rounded-lg object-cover w-full"
-                    priority={index < 4}
                   />
-                  <span className="mt-2 text-base text-center">{game.name}</span>
+                  <span className={`mt-2 text-lg overflow-hidden whitespace-nowrap text-ellipsis ${isDarkMode ? 'text-gray-300' : 'text-black'}`} style={{ maxWidth: '100px' }}>
+
+                  {game.name}
+
+                  </span>
                 </div>
               ))}
             </div>

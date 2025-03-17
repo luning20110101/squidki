@@ -1,11 +1,16 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
 interface NavbarProps {
   onGameSelect?: (gameName: string) => void
+  onToggleTheme: () => void
+  isDarkMode: boolean
 }
 
 const recommendedGames = [
@@ -27,7 +32,7 @@ const recommendedGames = [
   }
 ]
 
-export default function Navbar({ onGameSelect }: NavbarProps) {
+export default function Navbar({ onGameSelect, onToggleTheme, isDarkMode }: NavbarProps) {
   const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -44,19 +49,26 @@ export default function Navbar({ onGameSelect }: NavbarProps) {
   }
 
   return (
-    <nav className="bg-gray-800 p-4 sticky top-0 z-50">
+    <nav className="bg-gray-800 p-4 sticky top-0 z-50 text-white">
       <div className="container mx-auto">
         {/* 桌面端布局 */}
         <div className="hidden lg:flex justify-between items-center">
-          <Link href="/" className="text-3xl md:text-4xl font-bold tracking-wider hover:text-purple-400 transition-colors">
-            Squidki
+          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
+            <Image 
+              src="/images/logo.png" 
+              alt="Squidki Logo" 
+              width={40} 
+              height={40}
+              className="rounded-full"
+            />
+            <span className="text-3xl md:text-4xl font-bold tracking-wider">Squidki</span>
           </Link>
           <div className="flex items-center space-x-6">
             {recommendedGames.map((game, index) => (
               <button
                 key={index}
                 onClick={() => handleGameClick(game.name)}
-                className="text-base hover:text-purple-400 transition-colors whitespace-nowrap"
+                className="text-base transition-colors whitespace-nowrap hover:text-purple-400"
               >
                 {game.name}
               </button>
@@ -67,20 +79,34 @@ export default function Navbar({ onGameSelect }: NavbarProps) {
             >
               More Squidki
             </Link>
+            {/* 主题切换按钮 */}
+            <button
+              onClick={onToggleTheme}
+              className="ml-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500 transition-colors"
+            >
+              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+            </button>
           </div>
         </div>
 
         {/* 平板端布局 */}
         <div className="hidden md:flex lg:hidden justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-wider hover:text-purple-400 transition-colors">
-            Squidki
+          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
+            <Image 
+              src="/images/logo.png" 
+              alt="Squidki Logo" 
+              width={32} 
+              height={32}
+              className="rounded-full"
+            />
+            <span className="text-2xl font-bold tracking-wider">Squidki</span>
           </Link>
           <div className="flex items-center space-x-4">
             {recommendedGames.map((game, index) => (
               <button
                 key={index}
                 onClick={() => handleGameClick(game.name)}
-                className="text-sm hover:text-purple-400 transition-colors whitespace-nowrap"
+                className="text-sm transition-colors whitespace-nowrap hover:text-purple-400"
               >
                 {game.name}
               </button>
@@ -91,13 +117,27 @@ export default function Navbar({ onGameSelect }: NavbarProps) {
             >
               More Squidki
             </Link>
+            {/* 主题切换按钮 */}
+            <button
+              onClick={onToggleTheme}
+              className="ml-4 px-3 py-1.5 bg-gray-600 text-white rounded-lg hover:bg-gray-500 transition-colors text-sm"
+            >
+              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+            </button>
           </div>
         </div>
 
         {/* 移动端布局 */}
         <div className="md:hidden flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold tracking-wider hover:text-purple-400 transition-colors">
-            Squidki
+          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
+            <Image 
+              src="/images/logo.png" 
+              alt="Squidki Logo" 
+              width={28} 
+              height={28}
+              className="rounded-full"
+            />
+            <span className="text-2xl font-bold tracking-wider">Squidki</span>
           </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -135,7 +175,7 @@ export default function Navbar({ onGameSelect }: NavbarProps) {
               <button
                 key={index}
                 onClick={() => handleGameClick(game.name)}
-                className="block w-full text-left px-4 py-2 text-base hover:bg-gray-700 rounded transition-colors"
+                className="block w-full text-left px-4 py-2 text-base transition-colors hover:bg-gray-700 rounded"
               >
                 {game.name}
               </button>
@@ -146,6 +186,13 @@ export default function Navbar({ onGameSelect }: NavbarProps) {
             >
               More Squidki
             </Link>
+            {/* 主题切换按钮 */}
+            <button
+              onClick={onToggleTheme}
+              className="block w-full text-left px-4 py-2 text-base hover:bg-gray-700 rounded transition-colors"
+            >
+              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+            </button>
           </div>
         )}
       </div>

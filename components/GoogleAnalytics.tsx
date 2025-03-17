@@ -8,8 +8,8 @@ import ReactGA from 'react-ga4'
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 // 初始化 Google Analytics
-if (process.env.NODE_ENV === 'production' && GA_TRACKING_ID) {
-  ReactGA.initialize(GA_TRACKING_ID)
+if (process.env.NODE_ENV === 'production') {
+  ReactGA.initialize("G-8EDHF6H077")
 }
 
 export default function GoogleAnalytics() {
