@@ -32,7 +32,6 @@ export default function Home() {
       document.body.classList.remove('bg-gray-900')
     }
   }, [isDarkMode])
-
   return (
     <main>
       <Navbar onGameSelect={handleGameSelect} onToggleTheme={toggleTheme} isDarkMode={isDarkMode} />
