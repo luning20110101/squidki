@@ -49,11 +49,11 @@ export default function Navbar({ onGameSelect, onToggleTheme, isDarkMode }: Navb
   }
 
   return (
-    <nav className="bg-gray-800 p-4 sticky top-0 z-50 text-white">
+    <nav className="bg-gray-800 p-4 sticky top-0 z-50">
       <div className="container mx-auto">
-        {/* 桌面端布局 */}
-        <div className="hidden lg:flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
             <Image 
               src="/images/logo.png" 
               alt="Squidki Logo" 
@@ -61,138 +61,69 @@ export default function Navbar({ onGameSelect, onToggleTheme, isDarkMode }: Navb
               height={40}
               className="rounded-full"
             />
-            <span className="text-3xl md:text-4xl font-bold tracking-wider">Squidki</span>
+            <span className="text-2xl font-bold text-white">Squidki</span>
           </Link>
+          
+          {/* 右侧导航和按钮 */}
           <div className="flex items-center space-x-6">
-            {recommendedGames.map((game, index) => (
-              <button
-                key={index}
-                onClick={() => handleGameClick(game.name)}
-                className="text-base transition-colors whitespace-nowrap hover:text-purple-400"
-              >
-                {game.name}
-              </button>
-            ))}
+            {/* 导航链接 */}
+            <div className="hidden md:flex items-center space-x-6">
+              {recommendedGames.map((game, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleGameClick(game.name)}
+                  className="text-white hover:text-purple-400 transition-colors text-sm"
+                >
+                  {game.name}
+                </button>
+              ))}
+            </div>
+
+            {/* More Squidki 按钮 */}
             <Link 
               href="/more-games"
-              className="ml-6 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-700 text-white text-sm"
             >
               More Squidki
             </Link>
+
             {/* 主题切换按钮 */}
             <button
               onClick={onToggleTheme}
-              className="ml-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500 transition-colors"
+              className="bg-gray-700 p-2 rounded-lg text-white"
+              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
             </button>
           </div>
         </div>
 
-        {/* 平板端布局 */}
-        <div className="hidden md:flex lg:hidden justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
-            <Image 
-              src="/images/logo.png" 
-              alt="Squidki Logo" 
-              width={32} 
-              height={32}
-              className="rounded-full"
-            />
-            <span className="text-2xl font-bold tracking-wider">Squidki</span>
-          </Link>
-          <div className="flex items-center space-x-4">
-            {recommendedGames.map((game, index) => (
-              <button
-                key={index}
-                onClick={() => handleGameClick(game.name)}
-                className="text-sm transition-colors whitespace-nowrap hover:text-purple-400"
-              >
-                {game.name}
-              </button>
-            ))}
-            <Link 
-              href="/more-games"
-              className="ml-4 px-3 py-1.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm"
-            >
-              More Squidki
-            </Link>
-            {/* 主题切换按钮 */}
-            <button
-              onClick={onToggleTheme}
-              className="ml-4 px-3 py-1.5 bg-gray-600 text-white rounded-lg hover:bg-gray-500 transition-colors text-sm"
-            >
-              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
-            </button>
-          </div>
-        </div>
-
-        {/* 移动端布局 */}
-        <div className="md:hidden flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2 hover:text-purple-400 transition-colors">
-            <Image 
-              src="/images/logo.png" 
-              alt="Squidki Logo" 
-              width={28} 
-              height={28}
-              className="rounded-full"
-            />
-            <span className="text-2xl font-bold tracking-wider">Squidki</span>
-          </Link>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+        {/* 移动端菜单按钮 */}
+        <button
+          className="md:hidden fixed top-4 right-4"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
 
         {/* 移动端下拉菜单 */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2">
+          <div className="md:hidden absolute top-16 right-4 bg-gray-800 rounded-lg shadow-lg p-4 space-y-2">
             {recommendedGames.map((game, index) => (
               <button
                 key={index}
                 onClick={() => handleGameClick(game.name)}
-                className="block w-full text-left px-4 py-2 text-base transition-colors hover:bg-gray-700 rounded"
+                className="block w-full text-left px-4 py-2 text-white hover:bg-gray-700 rounded"
               >
                 {game.name}
               </button>
             ))}
-            <Link 
-              href="/more-games"
-              className="block w-full text-left px-4 py-2 text-base hover:bg-gray-700 rounded transition-colors"
-            >
-              More Squidki
-            </Link>
-            {/* 主题切换按钮 */}
-            <button
-              onClick={onToggleTheme}
-              className="block w-full text-left px-4 py-2 text-base hover:bg-gray-700 rounded transition-colors"
-            >
-              <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
-            </button>
           </div>
         )}
       </div>

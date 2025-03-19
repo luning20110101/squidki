@@ -7,7 +7,7 @@ import GameList from "./GameList"
 const games = [
   {
     name: "Squidki Game",
-    icon: "/images/new_mods/Squidki Game.jpg",
+    icon: "/images/new_mods/Squidki Game.png",
     url: "https://wowtbc.net/sprunkin/sprunki-squid-game/index.html",
     info: {
       developer: "Squidki Game",
@@ -24,7 +24,7 @@ const games = [
   },
   {
     name: "Squidki Pyramixed Game",
-    icon: "/images/new_mods/Squidki Pyramixed Game.jpg",
+    icon: "/images/new_mods/Squidki Pyramixed Game.png",
     url: "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
     info: {
       developer: "Squidki Game",
@@ -41,7 +41,7 @@ const games = [
   },
   {
     name: "Super Friday Night Squid Challenge",
-    icon: "/images/new_mods/Super Friday Night Squid Challenge.jpg",
+    icon: "/images/new_mods/Super Friday Night Squid Challenge.png",
     url: "https://sprunki-games.com/super-friday-night-squid-challenge.embed",
     info: {
       developer: "Squidki Game",
@@ -58,7 +58,7 @@ const games = [
   },
   {
     name: "Squidki Retake",
-    icon: "/images/new_mods/Squidki Retake.jpg",
+    icon: "/images/new_mods/Squidki Retake.png",
     url: "https://wowtbc.net/sprunkin/retake/index.html",
     info: {
       developer: "Squidki Game",
@@ -75,7 +75,7 @@ const games = [
   },
   {
     name: "Squidki Sinner",
-    icon: "/images/new_mods/Squidki Sinner.jpg",
+    icon: "/images/new_mods/Squidki Sinner.png",
     url: "https://game.sprunkiincredibox.app/Sprunki%20Incredibox.html",
     info: {
       developer: "Squidki Game",
@@ -93,7 +93,7 @@ const games = [
   },
   {
     "name": "Sprunki Spruted Remastered",
-    "icon": "/images/new_mods/Sprunki Spruted Remastered.jpeg",
+    "icon": "/images/new_mods/Sprunki Spruted Remastered.png",
     "url": "https://wowtbc.net/sprunkin/spruted-remastered/index.html",
     info: {
       developer: "Squidki Game",
@@ -312,40 +312,6 @@ const games = [
       controls: "Use a mouse to play the game.",
     },
   },
-  {
-    "name": "Sprunksters But Sprinkle",
-    "icon": "/images/new_mods/Sprunksters But Sprinkle.png",
-    "url": "https://wowtbc.net/sprunkin/sprunksters-sprinkle/index.html",
-    info: {
-      developer: "Squidki Game",
-      rating: "8.9 (338,606 votes)",
-      votes: "476",
-      released: "October 2024",
-      lastUpdated: "Nov 20, 2024",
-      technology: "HTML5",
-      platform: "Browser (desktop, mobile, tablet)",
-      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
-      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
-      controls: "Use a mouse to play the game.",
-    },
-  },
-  {
-    "name": "Sprunki Final",
-    "icon": "/images/new_mods/Sprunki Final.png",
-    "url": "https://wowtbc.net/sprunkin/sprunki-final/index.html",
-    info: {
-      developer: "Squidki Game",
-      rating: "8.9 (338,606 votes)",
-      votes: "476",
-      released: "October 2024",
-      lastUpdated: "Nov 20, 2024",
-      technology: "HTML5",
-      platform: "Browser (desktop, mobile, tablet)",
-      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
-      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
-      controls: "Use a mouse to play the game.",
-    },
-  },
 ]
 
 interface GameIframeProps {
@@ -430,7 +396,7 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
                       <p><strong>Technology:</strong> {selectedGame.info.technology}</p>
                       <p><strong>Platform:</strong> {selectedGame.info.platform}</p>
                       <p><strong>Controls:</strong> {selectedGame.info.controls}</p>
-                    </div>
+                  </div>
                 </div>
                 <div className="mb-4">
                   <strong>Tags:</strong>
@@ -489,7 +455,7 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
                     height={56}
                     className="rounded-lg object-cover w-full"
                   />
-                  <span className={`mt-2 text-lg overflow-hidden whitespace-nowrap text-ellipsis ${isDarkMode ? 'text-gray-300' : 'text-black'}`} style={{ maxWidth: '100px' }}>
+                  <span className={`mt-2 text-sm text-center ${isDarkMode ?  'text-white' : 'text-black'}`} style={{ maxWidth: '100px' }}>
 
                   {game.name}
 

@@ -5,7 +5,7 @@ import Image from "next/image"
 const games = [
     {
         "name": "Sprunki Spruted Remastered",
-        "icon": "/images/new_mods/Sprunki Spruted Remastered.jpeg",
+        "icon": "/images/new_mods/Sprunki Spruted Remastered.png",
         "url": "https://wowtbc.net/sprunkin/spruted-remastered/index.html",
         "description": "Home Squidki Spruted Remastered Squidki Spruted Remastered 583 votes Squidki Spruted Remastered M...",
         "type": "New Mods"
@@ -142,20 +142,6 @@ const games = [
         "url": "https://wowtbc.net/sprunkin/phase3.5v2/index.html",
         "description": "Home Squidki Phase 3.5v2 Squidki Phase 3.5v2 583 votes Squidki Phase 3.5v2 Mod is an enhanced, re...",
         "type": "New Mods"
-      },
-      {
-        "name": "Goonzy but Sprunki",
-        "icon": "/images/new_mods/Goonzy but Sprunki.png",
-        "url": "https://wowtbc.net/sprunkin/goonzy-sprunki/index.html",
-        "description": "Home Goonzy but Squidki Goonzy but Squidki 583 votes Goonzy but Squidki Mod is a fusion of Goonzy...",
-        "type": "New Mods"
-      },
-      {
-        "name": "Sprunki Pokemon But Pyramixed",
-        "icon": "/images/new_mods/Sprunki Pokemon But Pyramixed.png",
-        "url": "https://wowtbc.net/sprunkin/pokemon-pyramixed/index.html",
-        "description": "Home Squidki Pokemon But Pyramixed Squidki Pokemon But Pyramixed 583 votes Code: 1025 Squidki Pok...",
-        "type": "New Mods"
       }
 ]
 
@@ -167,10 +153,12 @@ interface GameListProps {
 
 export default function GameList({ onSelect, currentGame, isDarkMode }: GameListProps) {
   return (
-    <div className="lg:w-1/4">
-      <h3 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Popular Games</h3>
+    <div className="w-full lg:w-1/4">
+      <h3 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+        Popular Games
+      </h3>
       
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
         {games.map((game, index) => (
           <div
             key={index}
@@ -182,9 +170,9 @@ export default function GameList({ onSelect, currentGame, isDarkMode }: GameList
               alt={game.name}
               width={120}
               height={120}
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover w-full h-auto"
             />
-            <span className={`mt-2 text-lg ${isDarkMode ? 'text-white' : 'text-black'} overflow-hidden whitespace-nowrap text-ellipsis`} style={{ maxWidth: '100px' }}>
+            <span className={`mt-2 text-sm text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
               {game.name}
             </span>
           </div>
