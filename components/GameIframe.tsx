@@ -23,11 +23,11 @@ const games = [
     },
   },
   {
-    name: "Squidki Pyramixed Game",
-    icon: "/images/new_mods/Squidki Pyramixed Game.png",
-    url: "https://wowtbc.net/sprunkin/sprunki-pyramixed/index.html",
+    name: "crazycattle3d",
+    icon: "/images/new_mods/crazy-cattle-3d-m160x96.jpg",
+    url: "https://smash-karts.org/crazy-cattle-3d.embed",
     info: {
-      developer: "Squidki Game",
+      developer: "crazycattle3d",
       rating: "8.9 (338,606 votes)",
       votes: "476",
       released: "October 2024",
@@ -89,7 +89,7 @@ const games = [
       description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
       controls: "Use a mouse to play the game.",
     },
-    
+
   },
   {
     "name": "Sprunki Spruted Remastered",
@@ -348,8 +348,8 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
           Play {selectedGame.name}
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
-          <GameList 
-            onSelect={onGameSelect} 
+          <GameList
+            onSelect={onGameSelect}
             currentGame={currentGame}
             isDarkMode={isDarkMode}
           />
@@ -370,7 +370,7 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
                 </svg>
               )}
             </button>
-            
+
             {/* iframe */}
             <div ref={containerRef} className="relative pt-[56.25%] bg-black rounded-lg overflow-hidden">
               <iframe
@@ -433,7 +433,7 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
                       <div className="text-purple-500">✓</div>
                       <p className={`text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-black'}`}>Utilize your musical creativity to compose strategic beats tailored for each elimination round. Your compositions should not only entertain but also serve as tactical tools that can influence the dynamics of the game, enhancing your chances of survival against formidable opponents.</p>
                     </div>
-                    
+
                 </div>
               </div>
               </>
