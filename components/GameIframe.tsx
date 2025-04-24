@@ -278,40 +278,6 @@ const games = [
       controls: "Use a mouse to play the game.",
     },
   },
-  {
-    "name": "Sprunksters But Sprinkle",
-    "icon": "/images/new_mods/Sprunksters But Sprinkle.png",
-    "url": "https://wowtbc.net/sprunkin/sprunksters-but-Sprinkle/index.html",
-    info: {
-      developer: "Squidki Game",
-      rating: "8.9 (338,606 votes)",
-      votes: "476",
-      released: "October 2024",
-      lastUpdated: "Nov 20, 2024",
-      technology: "HTML5",
-      platform: "Browser (desktop, mobile, tablet)",
-      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
-      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
-      controls: "Use a mouse to play the game.",
-    },
-  },
-  {
-    "name": "Sprunki Chaotic Good Night Time",
-    "icon": "/images/new_mods/Sprunki Chaotic Good Night Time.png",
-    "url": "https://wowtbc.net/sprunkin/chaotic-good-night/index.html",
-    info: {
-      developer: "Squidki Game",
-      rating: "8.9 (338,606 votes)",
-      votes: "476",
-      released: "October 2024",
-      lastUpdated: "Nov 20, 2024",
-      technology: "HTML5",
-      platform: "Browser (desktop, mobile, tablet)",
-      tags: ["Casual 1,067", "Scratch 18", "Mobile 510", "Monster 198", "2D 798", "Music 21", "Mouse 1,366"],
-      description: "Squidki is a casual music game that lets you craft unique soundscapes. This modded version of Incredibox by NyankoBfLolCombine gives you DJ control to mix loops, vocals, beats, and melodies—pretty much create your own musical style. The game features vibrant characters and sounds for a completely immersive experience full of rhythmic possibilities. Whether you're a music enthusiast or just love experimenting, it's a fun and engaging way to express your creativity.",
-      controls: "Use a mouse to play the game.",
-    },
-  },
 ]
 
 interface GameIframeProps {
@@ -343,7 +309,7 @@ export default function GameIframe({ currentGame, onGameSelect, isDarkMode }: Ga
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto px-4">
         <h2 className={`text-3xl md:text-4xl font-bold tracking-wider mb-8 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>
           Play {selectedGame.name}
         </h2>

@@ -129,20 +129,6 @@ const games = [
         "description": "Home Sprunked Remake 3.0 Sprunked Remake 3.0 583 votes Sprunked Remake 3.0 Mod is a fully upgrade...",
         "type": "New Mods"
       },
-      {
-        "name": "Sprunki Pyramixed but Jet & Emily joined",
-        "icon": "/images/new_mods/Sprunki Pyramixed but Jet & Emily joined.png",
-        "url": "https://wowtbc.net/sprunkin/pyramixed-emily/index.html",
-        "description": "Home Squidki Pyramixed but Jet & Emily joined Squidki Pyramixed but Jet & Emily joined 583 votes ...",
-        "type": "New Mods"
-      },
-      {
-        "name": "Sprunki Phase 3.5v2",
-        "icon": "/images/new_mods/Sprunki Phase 3.5v2.png",
-        "url": "https://wowtbc.net/sprunkin/phase3.5v2/index.html",
-        "description": "Home Squidki Phase 3.5v2 Squidki Phase 3.5v2 583 votes Squidki Phase 3.5v2 Mod is an enhanced, re...",
-        "type": "New Mods"
-      }
 ]
 
 interface GameListProps {
@@ -157,7 +143,7 @@ export default function GameList({ onSelect, currentGame, isDarkMode }: GameList
       <h3 className={`text-2xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
         Popular Games
       </h3>
-      
+
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
         {games.map((game, index) => (
           <div
@@ -180,4 +166,4 @@ export default function GameList({ onSelect, currentGame, isDarkMode }: GameList
       </div>
     </div>
   )
-} 
+}

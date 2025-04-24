@@ -25,6 +25,11 @@ export default function Footer() {
                   Popular Mods
                 </a>
               </li>
+              <li>
+                <a href="https://cheese-chompers-3d.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  Cheese Chompers 3D
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -34,7 +39,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  harryc199101@gmail.com
+                  HarryC199101@gmail.com
                 </a>
               </li>
             </ul>
