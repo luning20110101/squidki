@@ -5,7 +5,7 @@ const GameplayGuide = () => {
     <section className="py-16 bg-gray-900">
       <div className="max-w-[1920px] mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">Master Squidki: Your Ultimate Guide</h2>
-        
+
         <div className="max-w-[1600px] mx-auto space-y-10">
           {/* Introduction */}
           <div className="bg-gray-800 rounded-lg p-12">
@@ -83,18 +83,28 @@ const GameplayGuide = () => {
           {/* Gameplay Video */}
           <div className="bg-gray-800 rounded-lg p-12">
             <h3 className="text-2xl font-bold mb-8">Gameplay Video</h3>
-            <div className="max-w-[1400px] mx-auto h-[800px]">
-              <iframe
-                src="https://www.youtube.com/embed/x72yVyvOS1Y"
-                title="Squidki Gameplay Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full rounded-lg"
-              ></iframe>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="w-full md:w-1/2">
+                <iframe width="688" height="387" src="https://www.youtube.com/embed/YBWb6h5Abes"
+                        title="Incredibox Sprunki - Squidki (Normal/Horror)" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <p className="text-gray-300 text-lg text-center mt-6">
+                  Watch this comprehensive overview of Squidki's unique gameplay mechanics and features.
+                </p>
+              </div>
+
+              <div className="w-full md:w-1/2">
+                <iframe width="688" height="387" src="https://www.youtube.com/embed/xu_u-K7ufKg"
+                        title="Incredibox Sprunki But SQUIDKI | New Mod | CUTE VS SCARY BEATS 2" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <p className="text-gray-300 text-lg text-center mt-6">
+                  Discover advanced techniques and strategies to master Squidki's challenging levels.
+                </p>
+              </div>
+
             </div>
-            <p className="text-gray-300 text-lg text-center mt-6">
-              Watch the gameplay video to see Squidki in action and learn more about its unique musical features!
-            </p>
           </div>
         </div>
       </div>
@@ -102,4 +112,4 @@ const GameplayGuide = () => {
   )
 }
 
-export default GameplayGuide 
+export default GameplayGuide

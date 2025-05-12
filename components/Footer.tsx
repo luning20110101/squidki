@@ -16,13 +16,13 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/more-games" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  New Mods
+                <a href="https://www.brainrotclicker.pro" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  Brainrot Clicker
                 </a>
               </li>
               <li>
-                <a href="/more-games" className="text-blue-400 hover:text-blue-300 transition-colors">
-                  Popular Mods
+                <a href="https://www.mergefellas.pro" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  Merge Fellas
                 </a>
               </li>
               <li>

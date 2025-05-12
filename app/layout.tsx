@@ -1,15 +1,9 @@
-import type React from "react"
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import GoogleAnalytics from "@/components/GoogleAnalytics"
-
-const inter = Inter({ subsets: ["latin"] })
+import './globals.css'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Squidki - The Ultimate Squidki Experience",
-  description: "Welcome to Squidki—where Sprunki's beats meet Squid Game's thrill. Create music, survive deadly challenges, and strategize in a unique rhythm-inspired world.",
-  generator: 'v0.dev'
+  title: 'Squidki Games',
+  description: 'Play Squidki Games Online',
 }
 
 export default function RootLayout({
@@ -19,12 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-900 text-white`}>
-        <GoogleAnalytics />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
-
-import './globals.css'
