@@ -1,5 +1,4 @@
 # Squidki - The Ultimate Musical Survival Game
-![image](https://github.com/user-attachments/assets/ebb8b626-90f9-445b-943d-2c3bec034684)
 
 Welcome to **Squidki**, a revolutionary browser-based game that fuses the creativity of music mixing with the intensity of survival challenges inspired by the iconic Squid Game. Released in October 2024, Squidki invites players to dive into a vibrant world where rhythm and strategy collide, offering an immersive experience unlike any other. Whether you're a music enthusiast or a fan of thrilling survival gameplay, Squidki provides endless opportunities to express your creativity and test your skills. Play now at [https://www.squidki.pro](https://www.squidki.pro) or contact us at Harryc199101@gmail.com.
 
