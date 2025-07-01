@@ -151,7 +151,7 @@ export default function GameList({ onSelect, currentGame, isDarkMode }: GameList
             className="flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
             onClick={() => onSelect(game.name)}
           >
-            <Image
+            <img
               src={game.icon}
               alt={game.name}
               width={120}

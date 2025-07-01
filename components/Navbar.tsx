@@ -54,7 +54,7 @@ export default function Navbar({ onGameSelect, onToggleTheme, isDarkMode }: Navb
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image 
+            <img 
               src="/images/logo.png" 
               alt="Squidki Logo" 
               width={40} 
